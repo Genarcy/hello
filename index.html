@@ -88,6 +88,70 @@
                 box-shadow: 0 0 20px rgba(255, 105, 180, 0);
             }
         }
+        /* Hello Kitty Art */
+        .hello-kitty {
+            width: 100px;
+            height: 100px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            position: absolute;
+            animation: hello-kitty-animation 3s infinite alternate;
+        }
+        .hello-kitty:before,
+        .hello-kitty:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .hello-kitty:before {
+            top: 10px;
+            left: 35px;
+        }
+        .hello-kitty:after {
+            top: 10px;
+            left: 60px;
+        }
+        .hello-kitty .eyes {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .hello-kitty .eyes.left {
+            top: 25px;
+            left: 30px;
+        }
+        .hello-kitty .eyes.right {
+            top: 25px;
+            left: 55px;
+        }
+        .hello-kitty .eyes .pupils {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .hello-kitty .eyes .pupils.left {
+            top: 7px;
+            left: 5px;
+        }
+        .hello-kitty .eyes .pupils.right {
+            top: 7px;
+            left: 5px;
+        }
+        @keyframes hello-kitty-animation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,5 +167,7 @@
             <p>Other Info: [Other Info about you]</p>
         </div>
     </div>
+    <!-- Hello Kitty Art -->
+    <div class="hello-kitty"></div>
 </body>
 </html>
