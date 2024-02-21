@@ -6,9 +6,9 @@
     <title>About Me</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
@@ -16,14 +16,16 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #000;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
+            position: relative;
+            overflow: hidden;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #ff69b4;
         }
         .profile-image {
             width: 200px;
@@ -31,22 +33,73 @@
             border-radius: 50%;
             margin: 0 auto 20px;
             display: block;
+            position: relative;
+            border: 10px solid #ff69b4;
+            background: #000;
+        }
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #ff69b4 20%, transparent 20%);
+            background-size: 100% 100%;
+            top: 0;
+            left: 0;
+            animation: wave-animation 1s infinite linear;
+        }
+        @keyframes wave-animation {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
         }
         .info {
             text-align: center;
+            color: #ff69b4;
         }
         .info p {
             margin: 10px 0;
+        }
+        .username {
+            font-weight: bold;
+            color: #ff69b4;
+            font-size: 20px;
+            position: relative;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background-color: #000;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            animation: neon-glow 1.5s infinite alternate;
+        }
+        @keyframes neon-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 105, 180, 0);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>About Me</h1>
-        <img src="https://via.placeholder.com/200" alt="Profile Picture" class="profile-image">
+        <div class="profile-image">
+            <div class="wave"></div>
+            <img src="https://via.placeholder.com/200" alt="Profile Picture">
+        </div>
         <div class="info">
-            <p>Roblox Username: [Your Roblox Username]</p>
-            <p>Discord Username: [Your Discord Username]</p>
+            <p>Roblox Username: <span class="username">[Your Roblox Username]</span></p>
+            <p>Discord Username: <span class="username">[Your Discord Username]</span></p>
             <p>Other Info: [Other Info about you]</p>
         </div>
     </div>
