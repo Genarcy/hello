@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #000;
+            background: url('1000019591_w_trans.png') no-repeat fixed;
+            background-size: cover;
             color: #fff;
             margin: 0;
             padding: 0;
@@ -16,7 +17,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
@@ -90,59 +91,70 @@
         }
         /* Hello Kitty Art */
         .hello-kitty {
-            width: 100px;
-            height: 100px;
-            background-color: #ff69b4;
-            border-radius: 50%;
             position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            left: 20%;
+            top: 10%;
             animation: hello-kitty-animation 3s infinite alternate;
         }
-        .hello-kitty:before,
+        .hello-kitty:before {
+            content: '';
+            position: absolute;
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left: 35%;
+            top: 40%;
+        }
         .hello-kitty:after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left: 60%;
+            top: 40%;
+        }
+        .hello-kitty .eyes {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            top: 50%;
+            left: 70%;
+        }
+        .hello-kitty .eyes:before,
+        .hello-kitty .eyes:after {
             content: '';
             position: absolute;
             width: 20px;
             height: 20px;
             background-color: #fff;
             border-radius: 50%;
+            top: 10%;
         }
-        .hello-kitty:before {
-            top: 10px;
-            left: 35px;
+        .hello-kitty .eyes:before {
+            left: 25%;
         }
-        .hello-kitty:after {
-            top: 10px;
-            left: 60px;
+        .hello-kitty .eyes:after {
+            left: 50%;
         }
-        .hello-kitty .eyes {
+        .hello-kitty .mouth {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #fff;
-            border-radius: 50%;
-        }
-        .hello-kitty .eyes.left {
-            top: 25px;
-            left: 30px;
-        }
-        .hello-kitty .eyes.right {
-            top: 25px;
-            left: 55px;
-        }
-        .hello-kitty .eyes .pupils {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: #000;
-            border-radius: 50%;
-        }
-        .hello-kitty .eyes .pupils.left {
-            top: 7px;
-            left: 5px;
-        }
-        .hello-kitty .eyes .pupils.right {
-            top: 7px;
-            left: 5px;
+            width: 100px;
+            height: 60px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border: 2px solid #000;
+            top: 60%;
+            left: 35%;
+            transform: rotate(30deg);
         }
         @keyframes hello-kitty-animation {
             0% {
@@ -167,7 +179,5 @@
             <p>Other Info: [Other Info about you]</p>
         </div>
     </div>
-    <!-- Hello Kitty Art -->
-    <div class="hello-kitty"></div>
 </body>
 </html>
